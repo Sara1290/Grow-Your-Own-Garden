@@ -1,11 +1,14 @@
 //build a server, the 4 steps, the endpoints
 const express = require ('express')
 const cropCtrl = require('./controllers/cropCtrl')
+const cropSeedsCtrl = require('./controllers/cropSeedsCtrl')
 const app = express()
 app.use(express.json())
 
 //my base url is in the package.json keep in mind. all i need is end points here.
-app.get('/api/crops', cropCtrl.getCrops )
+app.get('/api/cropSeeds', cropSeedsCtrl.getCropSeeds)
+
+app.get('/api/crops', cropCtrl.getCrops)
 app.post('/api/crops',)
 app.put('/api/crops/:id',)
 app.delete('/api/crops/:id',)

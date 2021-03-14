@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Harvest from './Harvest'
-import axios from 'axios'
+// import axios from 'axios'
 
 class Garden extends Component {
     constructor(){
@@ -11,10 +11,9 @@ class Garden extends Component {
         }
     }
 
-    
-
+  
     render(){
-        console.log('garden state:', this.state)
+        console.log(this.props)
         this.state.garden = this.props.garden
         const harvest = this.state.garden.map((veggie, i) => {
             return(

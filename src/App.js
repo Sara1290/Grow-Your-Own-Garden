@@ -28,7 +28,7 @@ axios.get('/api/cropSeeds')
 }
 
 selectVeggie = (veggie) => {
-  axios.post('/api/crops', veggie)
+  axios.post('/api/cropSeeds', veggie)
   .then(res => {
     this.setState({
       crops: res.data.crops,
@@ -40,7 +40,7 @@ selectVeggie = (veggie) => {
 updateGarden = (id) => {
   id = +id
   let garden = this.state.garden
-  axios.put(`/api/crops/${id}`, garden)
+  axios.put(`/api/cropSeeds/${id}`, garden)
   .then(res => {
       console.log(res)
     this.setState({

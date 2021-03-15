@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import axios from 'axios'
+
 
 class SownCrops extends Component {
     constructor(){
@@ -14,7 +14,7 @@ class SownCrops extends Component {
 
     render(){
         return(
-            <button>Dig Up Your Garden</button>
+            <button onClick={() => this.props.updateGarden}>Dig Up Your Garden</button>
         )
     }
 }

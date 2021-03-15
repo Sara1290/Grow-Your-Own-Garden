@@ -9,6 +9,6 @@ app.use(express.json())
 app.get('/api/cropSeeds', cropSeedsCtrl.getCropSeeds)
 app.post('/api/cropSeeds', cropSeedsCtrl.addToGarden)
 app.put('/api/cropSeeds/:id', cropSeedsCtrl.updateGarden)
-app.delete('/api/cropSeeds')
+app.delete('/api/cropSeeds', cropSeedsCtrl.deleteGarden)
 
 app.listen(4242, () => console.log('Server is running on 4242'))

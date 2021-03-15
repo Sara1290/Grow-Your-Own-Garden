@@ -1,4 +1,4 @@
-//class component
+
 import React from 'react'
 
 const ChooseCrops = (props) => {

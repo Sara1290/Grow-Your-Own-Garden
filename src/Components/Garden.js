@@ -21,7 +21,7 @@ class Garden extends Component {
             )
           })
         return(
-            <div>
+            <div className='garden-body'>
                 {harvest}
             </div>
         )

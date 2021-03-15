@@ -1,8 +1,36 @@
 .App {
   text-align: center;
+  background-color: skyblue;
 }
 
-.App-logo {
+.garden-body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: #7BEF68;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +63,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

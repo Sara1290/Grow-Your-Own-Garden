@@ -36,5 +36,10 @@ module.exports = {
         const harvestedVeggie = garden.findIndex(veggie => veggie.id === +id);
         data.garden.splice(harvestedVeggie, 1);
         res.status(200).send(data.garden)
+    },
+    deleteGarden: (req, res) => {
+        let garden = data.garden
+        garden.splice(0)
+        res.status(200).send(data)
     }
 }

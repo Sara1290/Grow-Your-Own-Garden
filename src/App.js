@@ -5,6 +5,7 @@ import axios from 'axios'
 import './App.css';
 import ChooseCrops from './Components/ChooseCrops';
 import SownCrops from './Components/SownCrops';
+import Header from './Components/Header';
 
 
 class App extends Component {
@@ -25,8 +26,8 @@ axios.get('/api/cropSeeds')
     crops: res.data.crops,
     garden: res.data.garden
   })
-  // .catch(err => console.log(err))
 })
+.catch(err => console.log(err))
 }
 
 selectVeggie = (veggie) => {
@@ -42,7 +43,7 @@ selectVeggie = (veggie) => {
 
 updateGarden = (id) => {
   id = +id
-  let garden = this.state.garden
+  let {garden} = this.state
   axios.put(`/api/cropSeeds/${id}`, garden)
   .then(res => {
     this.setState({
@@ -53,7 +54,7 @@ updateGarden = (id) => {
 } 
 
   deleteGarden = () => {
-    let garden = this.state.garden
+    let {garden} = this.state
     axios.delete('/api/cropSeeds', garden)
     .then(res => {
       this.setState({
@@ -74,6 +75,7 @@ updateGarden = (id) => {
     
   return (
     <div className="App">
+     <Header />
      {chooseCrops}
      <Garden updateGarden={this.updateGarden} garden={this.state.garden}/>
      <SownCrops garden={this.state.garden} deleteGarden={this.deleteGarden} />

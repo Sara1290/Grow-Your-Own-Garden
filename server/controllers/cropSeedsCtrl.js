@@ -13,7 +13,7 @@ module.exports = {
         //pulling veggies sent from front end off of the request object 
         let veggie = req.body
         //getting garden array to store veggie in.
-        let garden = data.garden
+        let {garden} = data
         
         //we need each veggie to have a unique id so that later we can remove individual items.
         garden.length
@@ -38,7 +38,7 @@ module.exports = {
         res.status(200).send(data.garden)
     },
     deleteGarden: (req, res) => {
-        let garden = data.garden
+        let {garden} = data
         garden.splice(0)
         res.status(200).send(data)
     }

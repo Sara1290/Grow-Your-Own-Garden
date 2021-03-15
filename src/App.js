@@ -57,7 +57,7 @@ updateGarden = (id) => {
     axios.delete('/api/cropSeeds', garden)
     .then(res => {
       this.setState({
-        garden: res.data
+        garden: []
       })
     })
     .catch(err => console.log(err))
@@ -65,7 +65,7 @@ updateGarden = (id) => {
 
 
   render(){
-    console.log(this.state)
+    // console.log(this.state)
     const chooseCrops = this.state.crops.map((veggie, i ) => {
       return(
         <ChooseCrops img={veggie.img} veggie={veggie} selectVeggie={this.selectVeggie}/>
@@ -76,7 +76,7 @@ updateGarden = (id) => {
     <div className="App">
      {chooseCrops}
      <Garden updateGarden={this.updateGarden} garden={this.state.garden}/>
-     <SownCrops deleteGarden={this.deleteGarden} />
+     <SownCrops garden={this.state.garden} deleteGarden={this.deleteGarden} />
     </div>
    )
   }

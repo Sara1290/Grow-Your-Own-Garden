@@ -14,7 +14,7 @@ class SownCrops extends Component {
 
     render(){
         return(
-            <button onClick={() => this.props.updateGarden}>Dig Up Your Garden</button>
+            <button onClick={() => this.props.deleteGarden()}>Dig Up Your Garden</button>
         )
     }
 }

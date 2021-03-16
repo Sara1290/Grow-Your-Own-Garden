@@ -10,3 +10,6 @@ const ChooseCrops = (props) => {
      
 }
 export default ChooseCrops
+
+
+//this shows the user a picture that IS a button

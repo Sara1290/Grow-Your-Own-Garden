@@ -45,6 +45,7 @@ body {
   margin-bottom: 4px;
   margin-top: 4px;
   padding: 15px;
+  outline: none;
 }
  .dig-button:hover {
   background-color: gold;
@@ -58,6 +59,7 @@ body {
   color: black;
   border-radius: 15px;
   padding: 5px;
+  outline: none;
 }
 
 .harvest-button:hover {

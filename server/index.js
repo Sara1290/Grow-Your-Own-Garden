@@ -1,6 +1,6 @@
 //build a server, the 4 steps, the endpoints
 const express = require ('express')
-const cropCtrl = require('./controllers/cropCtrl')
+// const cropCtrl = require('./controllers/cropCtrl')
 const cropSeedsCtrl = require('./controllers/cropSeedsCtrl')
 const app = express()
 app.use(express.json())

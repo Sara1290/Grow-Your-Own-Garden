@@ -14,7 +14,7 @@ class Garden extends Component {
   
     render(){
         console.log(this.props)
-        this.state.garden = this.props.garden
+        this.setState.garden = this.props.garden
         const harvest = this.state.garden.map((veggie, i) => {
             return(
               <Harvest updateGarden={this.props.updateGarden} img={veggie.img} veggie={veggie} />

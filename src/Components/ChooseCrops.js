@@ -4,7 +4,7 @@ import React from 'react'
 const ChooseCrops = (props) => {
     return(
     <button className='veggie-button' onClick={() => props.selectVeggie(props.veggie)}>
-        <img src={props.img}/>
+        <img alt="veggie cartoon" src={props.img}/>
     </button>
     )
      

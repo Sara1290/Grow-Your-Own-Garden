@@ -5,7 +5,7 @@ const Harvest = (props) => {
     return(
     <footer>
         <button className='harvest-button' onClick={() => props.updateGarden(props.veggie.id)}>Harvest</button>
-        <img src={props.img}/>
+        <img alt="vegetable cartoon" src={props.img}/>
     </footer>
     )
      
